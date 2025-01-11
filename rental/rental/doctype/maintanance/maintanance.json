@@ -1,43 +1,45 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-01-11 17:32:20.517843",
+ "creation": "2025-01-11 17:59:53.271265",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "customer_name",
-  "phone_number",
-  "email",
-  "address"
+  "car",
+  "maintanance_date",
+  "status",
+  "type"
  ],
  "fields": [
   {
-   "fieldname": "customer_name",
-   "fieldtype": "Data",
-   "label": "Customer Name"
+   "fieldname": "car",
+   "fieldtype": "Link",
+   "label": "Car",
+   "options": "Car"
   },
   {
-   "fieldname": "phone_number",
-   "fieldtype": "Phone",
-   "label": "Phone Number"
+   "fieldname": "maintanance_date",
+   "fieldtype": "Date",
+   "label": "Maintanance Date"
   },
   {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nDone"
   },
   {
-   "fieldname": "address",
+   "fieldname": "type",
    "fieldtype": "Data",
-   "label": "Address"
+   "label": "Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-11 17:51:54.813645",
+ "modified": "2025-01-11 18:03:08.078121",
  "modified_by": "Administrator",
  "module": "Rental",
- "name": "Customer",
+ "name": "Maintanance",
  "owner": "Administrator",
  "permissions": [
   {
