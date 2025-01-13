@@ -8,7 +8,8 @@
   "car_name",
   "model_name",
   "vehicle_number",
-  "insurance_expiry_date"
+  "insurance_expiry_date",
+  "daily_rental_rate"
  ],
  "fields": [
   {
@@ -30,11 +31,16 @@
    "fieldname": "insurance_expiry_date",
    "fieldtype": "Date",
    "label": "Insurance Expiry Date"
+  },
+  {
+   "fieldname": "daily_rental_rate",
+   "fieldtype": "Currency",
+   "label": "Daily Rental Rate"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-11 17:24:47.446858",
+ "modified": "2025-01-13 10:02:10.534262",
  "modified_by": "Administrator",
  "module": "Rental",
  "name": "Car",
