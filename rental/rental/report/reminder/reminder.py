@@ -7,6 +7,7 @@ def execute(filters=None):
     columns = [
         {"fieldname": "car_name", "label": "Car Name", "fieldtype": "Data"},
         {"fieldname": "model_name", "label": "Model Name", "fieldtype": "Data"},
+        {"fieldname": "vehicle_number", "label": "Vehicle Number", "fieldtype": "Data"},
         {"fieldname": "insurance_expiry_date", "label": "Insurance Expiry Date", "fieldtype": "Date"},
         {"fieldname": "status", "label": "Maintenance Status", "fieldtype": "Select", "options": "Pending\nDone"},
         {"fieldname": "maintanance_date", "label": "Maintenance Date", "fieldtype": "Date"},
@@ -16,7 +17,7 @@ def execute(filters=None):
     
     cars = frappe.get_all(
         "Car",
-        fields=["name", "car_name", "model_name", "insurance_expiry_date"],
+        fields=["name", "car_name", "model_name", "vehicle_number", "insurance_expiry_date"],
     )
 
     
@@ -29,7 +30,7 @@ def execute(filters=None):
     data = []
     for car in cars:
         
-        car_maintenance = [m for m in maintenance if m.get("car") == car.get("name")]
+        car_maintenance = [ca for ca in maintenance if ca.get("car") == car.get("name")]
 
         if car_maintenance:
             
@@ -37,6 +38,7 @@ def execute(filters=None):
                 data.append({
                     "car_name": car["car_name"],
                     "model_name": car["model_name"],
+                    "vehicle_number": car["vehicle_number"],
                     "insurance_expiry_date": car["insurance_expiry_date"],
                     "status": record["status"],
                     "maintanance_date": record["maintanance_date"],

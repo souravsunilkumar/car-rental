@@ -53,5 +53,5 @@ class Booking(Document):
         )
         if overlapping_bookings:
             frappe.throw(
-                f"The selected car is already booked for the given dates. Booking ID: {overlapping_bookings[0]['name']}"
+                f"The selected car is already booked for the another dates. Booking ID: {overlapping_bookings[0]['name']}"
             )

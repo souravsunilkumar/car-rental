@@ -8,7 +8,9 @@
   "car",
   "maintanance_date",
   "status",
-  "type"
+  "column_break_onie",
+  "type",
+  "maintenance_cost"
  ],
  "fields": [
   {
@@ -32,11 +34,20 @@
    "fieldname": "type",
    "fieldtype": "Data",
    "label": "Type"
+  },
+  {
+   "fieldname": "column_break_onie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_cost",
+   "fieldtype": "Currency",
+   "label": "Maintenance Cost"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-11 18:03:08.078121",
+ "modified": "2025-01-13 16:01:33.742647",
  "modified_by": "Administrator",
  "module": "Rental",
  "name": "Maintanance",
