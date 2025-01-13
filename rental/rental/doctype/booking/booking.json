@@ -9,7 +9,8 @@
   "car",
   "start_date",
   "end_date",
-  "status"
+  "status",
+  "total_price"
  ],
  "fields": [
   {
@@ -39,11 +40,16 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Pending\nBooked"
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "label": "Total Price"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-11 17:58:30.227472",
+ "modified": "2025-01-13 09:19:20.388791",
  "modified_by": "Administrator",
  "module": "Rental",
  "name": "Booking",

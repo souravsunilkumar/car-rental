@@ -6,7 +6,8 @@
  "engine": "InnoDB",
  "field_order": [
   "description",
-  "due_date"
+  "due_date",
+  "car"
  ],
  "fields": [
   {
@@ -18,11 +19,17 @@
    "fieldname": "due_date",
    "fieldtype": "Date",
    "label": "Due Date"
+  },
+  {
+   "fieldname": "car",
+   "fieldtype": "Link",
+   "label": "Car",
+   "options": "Car"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-12 14:57:34.264499",
+ "modified": "2025-01-13 09:18:57.414909",
  "modified_by": "Administrator",
  "module": "Rental",
  "name": "Rental Reminder",
