@@ -7,4 +7,4 @@ from frappe.utils import today, add_days, getdate
 
 class Maintanance(Document):
     pass
-
+	
