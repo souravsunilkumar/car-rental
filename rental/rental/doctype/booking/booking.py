@@ -11,7 +11,7 @@ class Booking(Document):
         self.validate_dates()
 
     def after_save(self):
-        """Set car availability based on the booking status."""
+       
         car = frappe.get_doc("Car", self.car)
         if self.status == "Rented":
             car.availability = "Rented"
@@ -20,26 +20,26 @@ class Booking(Document):
         car.save()
 
     def calculate_total_price(self):
-        """Calculate total price based on daily rental rate and number of days."""
+        
         if not self.start_date or not self.end_date:
             frappe.throw("Please set both Start Date and End Date.")
         
         if not self.car:
             frappe.throw("Please select a Car for the booking.")
         
-        # Get car details
+        
         car = frappe.get_doc("Car", self.car)
         daily_rental_rate = car.daily_rental_rate
 
-        # Calculate duration in days
-        duration = frappe.utils.date_diff(self.end_date, self.start_date) + 1
+        
+        duration = frappe.utils.date_diff(self.end_date, self.start_date)
         if duration < 1:
             frappe.throw("End Date must be after Start Date.")
 
         self.total_price = daily_rental_rate * duration
 
     def validate_dates(self):
-        """Ensure the car is not double-booked in the selected period."""
+        
         overlapping_bookings = frappe.get_all(
             "Booking",
             filters={
