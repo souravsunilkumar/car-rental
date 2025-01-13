@@ -1,16 +1,18 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-01-11 17:52:43.513024",
+ "autoname": "BK-.####",
+ "creation": "2025-01-13 11:12:21.894469",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "customer",
   "car",
+  "total_price",
+  "column_break_aogb",
   "start_date",
   "end_date",
-  "status",
-  "total_price"
+  "status"
  ],
  "fields": [
   {
@@ -26,6 +28,15 @@
    "options": "Car"
   },
   {
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "label": "Total Price"
+  },
+  {
+   "fieldname": "column_break_aogb",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "start_date",
    "fieldtype": "Date",
    "label": "Start Date"
@@ -39,20 +50,16 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Pending\nBooked"
-  },
-  {
-   "fieldname": "total_price",
-   "fieldtype": "Currency",
-   "label": "Total Price"
+   "options": "Rented\nReturned"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-13 09:19:20.388791",
+ "modified": "2025-01-13 11:16:19.132906",
  "modified_by": "Administrator",
  "module": "Rental",
  "name": "Booking",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
