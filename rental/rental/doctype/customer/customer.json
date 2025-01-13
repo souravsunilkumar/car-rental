@@ -28,13 +28,13 @@
   },
   {
    "fieldname": "address",
-   "fieldtype": "Data",
+   "fieldtype": "Text",
    "label": "Address"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-11 17:51:54.813645",
+ "modified": "2025-01-13 09:43:34.906134",
  "modified_by": "Administrator",
  "module": "Rental",
  "name": "Customer",
