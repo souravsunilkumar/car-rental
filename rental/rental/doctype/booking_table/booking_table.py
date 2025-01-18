@@ -1,9 +1,10 @@
 # Copyright (c) 2025, sourav and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
+from frappe.utils import date_diff
 
 
-class Maintanance(Document):
+class Booking_table(Document):
 	pass

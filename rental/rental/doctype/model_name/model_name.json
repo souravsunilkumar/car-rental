@@ -1,46 +1,44 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{vehicle_number}-{model_name}",
- "creation": "2025-01-18 10:58:54.619440",
+ "autoname": "format:{brand}-{model_name}",
+ "creation": "2025-01-18 10:29:02.051100",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "model_name",
-  "status",
-  "column_break_ihwz",
-  "vehicle_number"
+  "brand",
+  "daily_rent_rate",
+  "column_break_rmns",
+  "model_name"
  ],
  "fields": [
   {
-   "fieldname": "model_name",
+   "fieldname": "brand",
    "fieldtype": "Link",
-   "label": "Model Name",
-   "options": "Model Name"
+   "label": "Brand",
+   "options": "Brand"
   },
   {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Available\nNot Available"
+   "fieldname": "daily_rent_rate",
+   "fieldtype": "Currency",
+   "label": "Daily Rent Rate"
   },
   {
-   "fieldname": "column_break_ihwz",
+   "fieldname": "column_break_rmns",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "vehicle_number",
+   "fieldname": "model_name",
    "fieldtype": "Data",
-   "label": "Vehicle Number",
-   "unique": 1
+   "label": "Model Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-18 11:07:57.189512",
+ "modified": "2025-01-18 10:55:49.982565",
  "modified_by": "Administrator",
  "module": "Rental",
- "name": "Car",
+ "name": "Model Name",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
