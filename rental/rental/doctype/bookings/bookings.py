@@ -26,7 +26,7 @@ class Bookings(Document):
             if rental_days < 0:
                 frappe.throw("End Date cannot be before Start Date.")
             
-            row.total_rate= rental_days * daily_rent_rate
+            row.total_rate= rental_days * daily_rent_rate * row.qty
             total_amount += row.total_rate
             
         self.total_amount = total_amount
