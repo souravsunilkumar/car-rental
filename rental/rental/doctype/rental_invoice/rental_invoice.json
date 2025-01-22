@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-20 17:45:47.572635",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+"field_order": [
+        "customer_section",
+        "customer",
+        "customer_name",
+        "column_break_4",
+        "posting_date",
+        "due_date",
+        "reservation_section",
+        "reservation",
+        "vehicle",
+        "column_break_10",
+        "start_date",
+        "end_date",
+        "items_section",
+        "items",
+        "totals_section",
+        "total_amount",
+        "column_break_17",
+        "total_tax",
+        "grand_total"
+    ],
+    "fields": [
+        {
+            "fieldname": "customer_section",
+            "fieldtype": "Section Break",
+            "label": "Customer Details"
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "Customer",
+            "options": "Customer Registration",
+            "reqd": 1
+        },
+        {
+            "fetch_from": "customer.customer_name",
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "Customer Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_4",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "Today",
+            "fieldname": "posting_date",
+            "fieldtype": "Date",
+            "label": "Posting Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "due_date",
+            "fieldtype": "Date",
+            "label": "Due Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "reservation_section",
+            "fieldtype": "Section Break",
+            "label": "Reservation Details"
+        },
+        {
+            "fieldname": "reservation",
+            "fieldtype": "Link",
+            "label": "Car Reservation",
+            "options": "Car Reservation"
+        },
+        {
+            "fieldname": "vehicle",
+            "fieldtype": "Link",
+            "label": "Vehicle",
+            "options": "Vehicle Registration",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_10",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "start_date",
+            "fieldtype": "Datetime",
+            "label": "Start Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "end_date",
+            "fieldtype": "Datetime",
+            "label": "End Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "items_section",
+            "fieldtype": "Section Break",
+            "label": "Invoice Items"
+        },
+        {
+            "fieldname": "items",
+            "fieldtype": "Table",
+            "label": "Items",
+            "options": "Rental Invoice Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "totals_section",
+            "fieldtype": "Section Break",
+            "label": "Totals"
+        },
+        {
+            "fieldname": "total_amount",
+            "fieldtype": "Currency",
+            "label": "Total Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_17",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "total_tax",
+            "fieldtype": "Currency",
+            "label": "Total Tax",
+            "read_only": 1
+        },
+        {
+            "fieldname": "grand_total",
+            "fieldtype": "Currency",
+            "label": "Grand Total",
+            "read_only": 1
+        }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-20 17:45:47.572635",
+ "modified_by": "Administrator",
+ "module": "Rental",
+ "name": "Rental Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

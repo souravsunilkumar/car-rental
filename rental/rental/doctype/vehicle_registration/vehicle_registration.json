@@ -1,0 +1,378 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-20 09:34:15.264098",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_fkrn",
+  "amended_from",
+  "vehicle_information_section",
+  "model_name",
+  "vehicle_manufacturer",
+  "fleet_manager",
+  "purchase_value",
+  "column_break_djje",
+  "model_information_section",
+  "seat_number",
+  "chasis",
+  "column_break_vuck",
+  "model_year",
+  "details_section",
+  "transmission",
+  "fuel_type",
+  "color",
+  "car_owner",
+  "insurance_no",
+  "column_break_feyx",
+  "odometer_value",
+  "image_preview",
+  "car_image",
+  "section_break_yklp",
+  "column_break_mdld",
+  "percent",
+  "amount",
+  "column_break_baam",
+  "registration_date",
+  "torque",
+  "is_insured",
+  "insurance_details_section",
+  "insurance_company",
+  "insurance_start",
+  "column_break_zbwk",
+  "insurance_date",
+  "expiry_date",
+  "vehicle_class",
+  "depreciation_in_month",
+  "depreciation_value",
+  "column_break_uola",
+  "vehicle_status",
+  "purchase_date",
+  "depreciation_details_section",
+  "column_break_rejj",
+  "license_plate_code",
+  "license_plate_number",
+  "column_break_vcyf",
+  "registration_no",
+  "branch"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_fkrn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle Registration",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "vehicle_information_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Information"
+  },
+  {
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_manufacturer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Manufacturer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fleet_manager",
+   "fieldtype": "Link",
+   "label": "Fleet Manager",
+   "options": "Employee"
+  },
+  {
+   "default": "0",
+   "fieldname": "purchase_value",
+   "fieldtype": "Float",
+   "label": "Purchase Value",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_djje",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model_information_section",
+   "fieldtype": "Section Break",
+   "label": "Model Information"
+  },
+  {
+   "default": "2",
+   "fieldname": "seat_number",
+   "fieldtype": "Int",
+   "label": "Number of Seats",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "chasis",
+   "fieldtype": "Data",
+   "label": "Chasis Number"
+  },
+  {
+   "fieldname": "column_break_vuck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model_year",
+   "fieldtype": "Int",
+   "label": "Model Year",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "default": "Manual",
+   "fieldname": "transmission",
+   "fieldtype": "Select",
+   "label": "Transmission",
+   "options": "Manual\nAutomatic"
+  },
+  {
+   "default": "Gasoline",
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "label": "Fuel Type",
+   "options": "Gasoline\nDiesel\nLPG\nElectric\nHubrid"
+  },
+  {
+   "fieldname": "column_break_feyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "odometer_value",
+   "fieldtype": "Int",
+   "label": "Odometer Value (KM)",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "image_preview",
+   "fieldtype": "Image",
+   "label": "Preview",
+   "options": "car_image"
+  },
+  {
+   "fieldname": "car_image",
+   "fieldtype": "Attach Image",
+   "label": "Upload Photo"
+  },
+  {
+   "fieldname": "car_owner",
+   "fieldtype": "Select",
+   "label": "Car Owner",
+   "options": "\nCompany\nInvestors\nBoth"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "insurance_no",
+   "fieldtype": "Data",
+   "label": "Insurance No"
+  },
+  {
+   "fieldname": "section_break_yklp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mdld",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.car_owner != \"Investors\"",
+   "fieldname": "percent",
+   "fieldtype": "Percent",
+   "label": "Percent",
+   "precision": "0"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.car_owner != \"Investors\"",
+   "fieldname": "amount",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Amount ",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_insured",
+   "fieldtype": "Check",
+   "label": "Is Insured?"
+  },
+  {
+   "depends_on": "eval: doc.is_insured == 1",
+   "fieldname": "insurance_details_section",
+   "fieldtype": "Section Break",
+   "label": "Insurance Details"
+  },
+  {
+   "fieldname": "insurance_company",
+   "fieldtype": "Data",
+   "label": "Insuarnce Company"
+  },
+  {
+   "fieldname": "insurance_start",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_zbwk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurance_date",
+   "fieldtype": "Date",
+   "label": "End Date "
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "vehicle_class",
+   "fieldtype": "Link",
+   "label": "Vehicle Class",
+   "non_negative": 1,
+   "options": "Vehicle Class"
+  },
+  {
+   "default": "0",
+   "fieldname": "depreciation_in_month",
+   "fieldtype": "Int",
+   "label": "Depreciation (In Months)",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "depreciation_value",
+   "fieldtype": "Float",
+   "label": "Depreciation Value",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_uola",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nOn Sale\nDirty\nSold\nReturned\nOut of Service"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "depreciation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Depreciation Details"
+  },
+  {
+   "fieldname": "column_break_rejj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "torque",
+   "fieldtype": "Int",
+   "label": "Fuel Level",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "license_plate_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "License Plate Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "license_plate_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "License Plate Number",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_no",
+   "fieldtype": "Select",
+   "label": "Registration No",
+   "options": "VEH-REG-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vcyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_baam",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-20 15:16:43.176257",
+ "modified_by": "Administrator",
+ "module": "Rental",
+ "name": "Vehicle Registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

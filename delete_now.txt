@@ -1,0 +1,89 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2025-01-20 10:39:43.032811",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "season_name",
+        "season_start_date",
+        "season_end_date",
+        "season_hourly_rate",
+        "season_daily_rate",
+        "season_weekly_rate",
+        "season_monthly_rate",
+        "parent",
+        "parenttype",
+        "parentfield"
+    ],
+    "fields": [
+        {
+            "fieldname": "season_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Name"
+        },
+        {
+            "fieldname": "season_start_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Start Date"
+        },
+        {
+            "fieldname": "season_end_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "End Date"
+        },
+        {
+            "fieldname": "season_hourly_rate",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Hourly Rate"
+        },
+        {
+            "fieldname": "season_daily_rate",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Daily Rate"
+        },
+        {
+            "fieldname": "season_weekly_rate",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Weekly Rate"
+        },
+        {
+            "fieldname": "season_monthly_rate",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Monthly Rate"
+        },
+        {
+            "fieldname": "parent",
+            "fieldtype": "Data",
+            "hidden": 1
+        },
+        {
+            "fieldname": "parenttype",
+            "fieldtype": "Data",
+            "hidden": 1
+        },
+        {
+            "fieldname": "parentfield",
+            "fieldtype": "Data",
+            "hidden": 1
+        }
+    ],
+    "istable": 1,
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2025-01-20 10:39:43.032811",
+    "modified_by": "Administrator",
+    "module": "Rental",
+    "name": "Seasons",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

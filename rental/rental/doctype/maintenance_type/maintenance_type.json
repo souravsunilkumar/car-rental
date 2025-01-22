@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-01-20 09:39:03.893596",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+"field_order": [
+  "naming_series",
+  "section_break_hgit",
+  "maintenance_type_name",
+  "vehicle_classes",
+  "column_break_eswr",
+  "is_active",
+  "is_recurring",
+  "interval_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Maintenance  Type No",
+   "options": "MAN-.TYP-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_hgit",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "maintenance_type_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "max_height": "10px"
+  },
+  {
+   "fieldname": "column_break_eswr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_classes",
+   "fieldtype": "Data",
+   "label": "Apply to Vehicle Classes"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active?"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_recurring",
+   "fieldtype": "Check",
+   "label": "Is Recurring?"
+  },
+  {
+   "depends_on": "eval:doc.is_recurring == 1",
+   "fieldname": "interval_value",
+   "fieldtype": "Int",
+   "label": "Interval Value (In Days)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-20 09:39:03.893596",
+ "modified_by": "Administrator",
+ "module": "Rental",
+ "name": "Maintenance Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

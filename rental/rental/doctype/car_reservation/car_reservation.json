@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-20 09:51:01.720033",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+   "car_reservation_section",
+   "reservation_name",
+   "section_break_mdhb",
+   "vehicle",
+   "employee",
+   "driver",
+   "column_break_jndb",
+   "approver",
+   "contactsemployee",
+   "date_and_time_section",
+   "start_time",
+   "column_break_xnxu",
+   "end_time",
+   "pick_up_information_section",
+   "pickup_location",
+   "dropoff_location",
+   "kilometers_distance",
+   "column_break_pwgp",
+   "description",
+   "map_section",
+   "map",
+   "section_break_jcgl",
+   "amended_from"
+  ],
+  "fields": [
+   {
+    "fieldname": "section_break_jcgl",
+    "fieldtype": "Section Break"
+   },
+   {
+    "fieldname": "amended_from",
+    "fieldtype": "Link",
+    "label": "Amended From",
+    "no_copy": 1,
+    "options": "Car Reservation",
+    "print_hide": 1,
+    "read_only": 1,
+    "search_index": 1
+   },
+   {
+    "fieldname": "car_reservation_section",
+    "fieldtype": "Section Break",
+    "label": "Car Reservation"
+   },
+   {
+    "fieldname": "section_break_mdhb",
+    "fieldtype": "Section Break"
+   },
+   {
+    "fieldname": "vehicle",
+    "fieldtype": "Data",
+    "in_list_view": 1,
+    "label": "Vehicle",
+    "reqd": 1
+   },
+   {
+    "fieldname": "column_break_jndb",
+    "fieldtype": "Column Break"
+   },
+   {
+    "fieldname": "approver",
+    "fieldtype": "Data",
+    "label": "Approver"
+   },
+   {
+    "fieldname": "contactsemployee",
+    "fieldtype": "Select",
+    "label": "Contacts/Employee",
+    "options": "Contacts\nEmployee"
+   },
+   {
+    "fieldname": "date_and_time_section",
+    "fieldtype": "Section Break",
+    "label": "Date And Time"
+   },
+   {
+    "fieldname": "start_time",
+    "fieldtype": "Datetime",
+    "label": "Start Time"
+   },
+   {
+    "fieldname": "column_break_xnxu",
+    "fieldtype": "Column Break"
+   },
+   {
+    "fieldname": "end_time",
+    "fieldtype": "Datetime",
+    "label": "End Time"
+   },
+   {
+    "fieldname": "pick_up_information_section",
+    "fieldtype": "Section Break",
+    "label": "Pick Up Information"
+   },
+   {
+    "fieldname": "pickup_location",
+    "fieldtype": "Data",
+    "label": "Pickup Location"
+   },
+   {
+    "fieldname": "dropoff_location",
+    "fieldtype": "Data",
+    "label": "Dropoff Location"
+   },
+   {
+    "fieldname": "kilometers_distance",
+    "fieldtype": "Int",
+    "label": "Kilometers (Distance)"
+   },
+   {
+    "fieldname": "column_break_pwgp",
+    "fieldtype": "Column Break"
+   },
+   {
+    "fieldname": "description",
+    "fieldtype": "Small Text",
+    "label": "Description"
+   },
+   {
+    "fieldname": "map_section",
+    "fieldtype": "Section Break"
+   },
+   {
+    "fieldname": "driver",
+    "fieldtype": "Link",
+    "label": "Driver",
+    "options": "Driver"
+   },
+   {
+    "fieldname": "map",
+    "fieldtype": "Geolocation",
+    "label": "Map"
+   }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-20 09:51:01.720033",
+ "modified_by": "Administrator",
+ "module": "Rental",
+ "name": "Car Reservation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "submit": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
